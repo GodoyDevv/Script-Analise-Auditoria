@@ -35,7 +35,7 @@ auditoria-5s-python
 
 1️⃣ Clone o repositório
 
-git clone https://github.com/seu-usuario/auditoria-5s-python
+git clone https://github.com/GodoyDevv/auditoria-5s-python
 
 2️⃣ Entre na pasta do projeto
 
