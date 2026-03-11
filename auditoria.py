@@ -3,7 +3,7 @@ import pandas as pd
 # ler planilha
 df = pd.read_excel("auditoria5S.xlsx")
 
-print(df.columns)
+df.columns = df.columns.str.strip()
 
 resultados = [] # criar uma lista vazia
 
@@ -11,6 +11,8 @@ resultados = [] # criar uma lista vazia
 for index, linha in df.iterrows():
 
     area = linha["Qual é o local que está auditando?"]
+
+    auditor = linha["Identificação do Auditor"]
 
     ruim = 0
     regular = 0
@@ -38,13 +40,21 @@ for index, linha in df.iterrows():
         elif resposta == "Ótimo":
             otimo += 1
 
+    pontos = (ruim * 1) + (regular * 2) + (bom * 3) + (otimo * 4)
+
+    maximo = (ruim + regular + bom + otimo) * 4
+
+    nota = round((pontos / maximo) * 100, 2)
+
     resultados.append({
     "Qual é o local que está auditando?": area,
+    "Identificação do Auditor": auditor,
     "Ruim": ruim,
     "Regular": regular,
     "Bom": bom,
     "Ótimo": otimo,
-    "NA": na
+    "NA": na,
+    "Nota (%)": nota
 })
 
     print("Auditoria", index + 1)
