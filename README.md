@@ -42,6 +42,29 @@ cd auditoria-5s-python
 
 python auditoria.py
 
+🧠 Fluxo de funcionamento do sistema
+
+Planilha Excel  
+⬇  
+Leitura da planilha com Pandas  
+⬇  
+Processamento das auditorias  
+⬇  
+Contagem das respostas  
+⬇  
+Cálculo dos pontos  
+⬇  
+Cálculo da nota (%)  
+⬇  
+Geração automática do relatório Excel
+
+📊 Exemplo de resultado gerado
+
+| Área     | Auditor | Ruim | Regular | Bom | Ótimo | N/A | Nota (%)
+|----------|---------|------|---------|-----|-------|-----|---------|
+| Produção |   João  |   2  |    5    |  8  |   7   |  1  |  78.45  |
+| Logística|  Maria  |   1  |    3    |  9  |   9   |  0  |  85.30  |
+
 🚧 **Melhorias futuras**
 
 Gerar gráficos automáticos
